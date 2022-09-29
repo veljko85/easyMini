@@ -1,0 +1,226 @@
+.tytul {
+  margin-top: 20px;
+}
+.button {
+  background-color: var(--megaorange);
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: var(--megaorangeLight);
+}
+div {
+  line-height: 1.2;
+}
+
+.vat {
+  clear: both;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 0.7rem;
+  margin-bottom: 0;
+}
+
+.scRemove img {
+  width: 1.6rem;
+  height: auto;
+}
+
+.scRemove {
+  padding: 3px;
+  background-color: #fcfcfc;
+  border: 1px solid #aaaaaa;
+}
+
+.scRemove:hover {
+  background-color: var(--megaorangeLight);
+  border: 1px solid #5a5655;
+}
+
+.cartpad > div {
+  border-right: 1px solid #ccc;
+  padding-top: 5px;
+}
+
+.cartpad {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ccc;
+  background-color: #f2f2f2;
+}
+
+.cartngl {
+  background-color: var(--megaorangeLight);
+}
+
+.cartngl > div {
+  border-right: 1px solid #ccc;
+  font-weight: 600;
+}
+
+input.scTxtQuantity2,
+input.scTxtQuantity {
+  width: 3rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.noborder {
+  border-right: none;
+}
+
+.scProductImage,
+.scProductImageSmall {
+  max-height: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scPDiv1 {
+  margin: 5px;
+  float: left;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid #999;
+  background: white;
+  text-align: center;
+}
+
+.scImg {
+  width: 5.17rem;
+  height: 5.17rem;
+  border: 1px solid #999;
+  background: white;
+  text-align: center;
+}
+
+.no-left-pad {
+  padding-left: 0 !important;
+}
+
+.button.secondary {
+  background-color: var(--megaorangeLight);
+  color: #000;
+}
+
+.button.secondary.sel {
+  color: #000;
+  background: var(--megaorange);
+  cursor: text;
+  font-weight: bold;
+}
+.button.secondary:hover {
+  background: var(--megaorange);
+  color: #000;
+}
+select.scSelCategory {
+  background: var(--megaorangeLight);
+}
+
+.scMenuBar.button-group {
+  border-bottom: 1px solid #cccccc;
+}
+
+.scLabelSubtotalValue {
+  margin-top: 3px;
+  margin-left: 5px;
+  margin-right: 2px;
+  padding: 5px;
+  background: #f5f5f5;
+  font-weight: bold;
+  border: 1px solid #aaaaaa;
+  float: right;
+}
+
+.scLabelSubtotalText {
+  display: block;
+  margin-top: 5px;
+  margin-right: 0px;
+  padding: 3px;
+  font-weight: bold;
+  float: right;
+}
+
+.scWalutaText {
+  display: block;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-left: 0px;
+  padding: 3px;
+  font-weight: bold;
+  float: right;
+}
+
+.scMain .scProductList .scProducts {
+  margin-top: 3px;
+  border: 1px solid #f5f5f5;
+  border-bottom: 1px solid #ccc;
+  background: #f5f5f5;
+}
+
+@media only screen and (max-width: 1023px) {
+  .cartpad > div {
+    border-right: none;
+    min-height: inherit;
+    padding: 1px !important;
+  }
+
+  .cartpad {
+    border-top: 1px solid #fff;
+  }
+
+  .cartpad label,
+  .scTxtQuantity2 {
+    display: inline !important;
+  }
+}
+
+.scMessageBar {
+  position: relative;
+  padding: 10px;
+  color: #000;
+  background: #f5f5f5;
+  border-top: 1px solid var(--megaorangeLight);
+  border-bottom: 1px solid var(--megaorangeLight);
+  text-align: center;
+}
+
+.scMessageBar2 {
+  position: fixed;
+  top: 50vh;
+  left: 0;
+  padding: 10px;
+  color: #000;
+  background: var(--megaorangeLight);
+  text-align: center;
+  width: 50%;
+  z-index: 98;
+}
+@media screen and (orientation: portrait) {
+  .scMessageBar2 {
+    width: 100%;
+    top: 75vh;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 799px) and (orientation: landscape) {
+  .scMessageBar2 {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1023px) and (orientation: landscape) {
+  .scMessageBar2 {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1499px) and (orientation: landscape) {
+  .scMessageBar2 {
+    width: 80%;
+  }
+}
+
+body,
+td,
+th {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Helvetica, Arial,
+    sans-serif;
+}

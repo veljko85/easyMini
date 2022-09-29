@@ -1,0 +1,138 @@
+:root {
+  --main-style-color: #3967ff;
+  --main-style-light-color: #aabeff;
+  --main-bg-color: #ffffff;
+  --main-font-color: #333333;
+  /* --main-font-color: #ffffff; */
+  --megaorange: #faa41a;
+  --megaorangeLight: #faa41a52;
+  --megaorangeMedium: #faa41abb;
+}
+html,
+body {
+  /* overflow: hidden; */
+  /* width: 400px;
+  height: 100%; */
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.wordpress-cont {
+  width: 1500px;
+  height: auto;
+  position: relative;
+}
+#customLoadingScreenDiv {
+  width: 100%;
+  height: 100%;
+  background-color: var(--megaorange);
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#lottieWraper {
+  width: 50px;
+  height: 50px;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.mini-planer-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  padding: 30px;
+}
+/* RENDER CANVAS */
+#renderCanvas {
+  width: 340px;
+  height: 240px;
+  touch-action: none;
+  outline: none !important;
+  /* margin: 40px; */
+}
+.mini-planer-configurator-container {
+  width: 820px;
+  height: auto;
+  margin: 0 0 0 50px;
+}
+.mini-planer-configurator-container h2 {
+  font-size: 20px;
+  margin: 0;
+}
+.mini-planer-configurator-container h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+.mini-planer-configurator-container p {
+  font-size: 15px;
+}
+table,
+th,
+td {
+  background-color: rgb(238, 238, 238);
+}
+td {
+  font-size: 15px;
+}
+th,
+td {
+  padding-bottom: 5px;
+}
+.bottom-of-configurator {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.zum-buttons-cont {
+  display: flex;
+  flex: 40%;
+  margin-top: 15px;
+}
+#zoomInBtn,
+#zoomOutBtn,
+#openFullConfgBtn {
+  background-color: rgb(68, 68, 68);
+  margin-left: 10px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#zoomInBtn,
+#zoomOutBtn {
+  width: 40px;
+  height: 40px;
+}
+#openFullConfgBtn {
+  height: 40px;
+  padding: 0 10px;
+}
+.size-price-data-cont {
+  display: flex;
+  flex: 40%;
+}
+.gesamtlange-cont,
+.gesamtpreis-cont {
+  text-align: center;
+}
+.go-to-cart-cont {
+  flex: 20%;
+  margin-top: 15px;
+}
+#go-to-cart-btn {
+  background-color: var(--megaorange);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
+  cursor: pointer;
+}

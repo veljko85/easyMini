@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link rel="icon" type="image/gif/png/svg" href="img/logo.svg" />
+  <title>Mega Holz | 3D Planer | EASY-FENCE</title>
+
+  <!-- fa fa fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- main style -->
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
+  <!-- nouislider cdn -->
+  <script src="scripts/dependencies/nouislider.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/nouislider.min.css" />
+  <!-- wNumb.js -->
+  <script src="scripts/dependencies/wNumb.min.js"></script>
+
+  <!-- lootie -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js"></script>
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+  <!-- Babylon.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+  <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+  <script src="https://preview.babylonjs.com/ammo.js"></script>
+  <script src="https://preview.babylonjs.com/cannon.js"></script>
+  <script src="https://preview.babylonjs.com/Oimo.js"></script>
+  <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+  <script src="https://preview.babylonjs.com/babylon.js"></script>
+  <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+  <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+  <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+  <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+  <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+  <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+  <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+  <!--  for cart -->
+  <!-- <link rel="stylesheet" type="text/css" href="styles/foundation.min.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300&amp;subset=latin-ext" rel="stylesheet"
+    type="text/css">
+  <link rel="stylesheet" type="text/css" href="styles/cartStyle.css">
+  <script type="text/javascript" src="scripts/dependencies/jquery-2.1.0.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="wordpress-cont">
+    <div id="customLoadingScreenDiv">
+      <div id="lottieWraper">
+      </div>
+    </div>
+
+    <div class="mini-planer-container">
+
+
+
+      <!-- CANVAS -->
+      <canvas id="renderCanvas"></canvas>
+      <!-- PLANER CONFIGURATOR -->
+      <div class="mini-planer-configurator-container">
+
+        <h2>3D Mini-Planer</h2>
+        <h1>Mit wenigen Klicks zum Wunsch-Sichtschutz!</h1>
+        <p>Gestalten Sie den gewünschten Sichtschutz mit wenigen Klicks. Sie benötigen andere Höhen, Formen oder<br>
+          Befestigungen? Kein Problem - der Mega-Holz 3D Planer lässt kaum Wünsche offen!</p>
+
+        <table id='conf-table' style="width:100%">
+          <tr>
+            <th style="text-align: left;">Artilel</th>
+            <th style="text-align: center;">Menge</th>
+            <th style="text-align: right;">Finzelpreis</th>
+            <th style="text-align: right;">Gesamtpries</th>
+          </tr>
+        </table>
+
+        <div class="bottom-of-configurator">
+          <div class="zum-buttons-cont">
+            <div id="zoomInBtn">+</div>
+            <div id="zoomOutBtn">-</div>
+            <a id="openFullConfgBtn" href="https://veljko85.github.io/easy/" target="_blank">
+              <div>Zum 3D Planer</div>
+            </a>
+          </div>
+
+          <div class="size-price-data-cont">
+            <div class="gesamtlange-cont">
+              <div>Gesamtlange</div>
+              <div id="fence-size-display" style="margin-top: 10px; font-weight: 900;"></div>
+            </div>
+            <div class="gesamtpreis-cont" style="margin-left: 20px;">
+              <div>Gesamtpreis</div>
+              <div id="price-display" style="margin-top: 10px; font-weight: 900;">100 &#x20AC</div>
+            </div>
+          </div>
+          <div class="go-to-cart-cont">
+            <a id="link" href="https://mega-holz.de/warenkorb/">
+              <div id="go-to-cart-btn">In den Warencorb</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CANVAS FOR 2D PLAN -->
+    <!-- <canvas id="canvas-plan" style="background-color: white; position: absolute; top: 50px; display: none;"></canvas> -->
+
+
+
+
+  </div>
+
+  <!-- SCRIPTS -->
+  <!-- smart cart -->
+  <!-- <script type="text/javascript" src="scripts/smartCartEdited.js"></script> -->
+  <!-- foundation.js -->
+  <!-- <script src="scripts/dependencies/foundation.min.js"></script> -->
+  <!-- main script file -->
+  <script src="index.js"></script>
+  <script src="scripts/lightsBabylon.js"></script>
+  <script src="scripts/addSkyBox.js"></script>
+  <script src="scripts/createMainPost.js"></script>
+  <script src="scripts/createNewFence.js"></script>
+  <script src="scripts/gardo/loadGardoFence.js"></script>
+  <script src="scripts/gardo/changeGardo.js"></script>
+  <script src="scripts/cameraTargetMesh.js"></script>
+  <script src="scripts/foundationVisibleFunction.js"></script>
+  <script src="scripts/intesectionFunction.js"></script>
+  <script src="scripts/intersectArrowSignsFence.js"></script>
+  <script src="scripts/postIntersaction.js"></script>
+  <script src="scripts/addDefaultMaterial.js"></script>
+  <script src="scripts/createDirecteHauswand.js"></script>
+  <script src="scripts/removeSideAccesories.js"></script>
+  <script src="scripts/onHover.js"></script>
+  <script src="scripts/loadCart.js"></script>
+  <script src="scripts/populateCartPrices.js"></script>
+  <script src="scripts/draw2dPlan.js"></script>
+  <script src="scripts/endOfBabylon.js"></script>
+
+</body>
+
+</html>
