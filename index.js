@@ -1842,6 +1842,11 @@ var createScene = function () {
       //set Ground
       setGround();
       // set coordinates for big 3d configurator
+      fencesCoordinates.push([
+        fence.position.x,
+        fence.position.z,
+        fence.rotation.y,
+      ]);
       //for loading
       setTimeout(() => {
         engine.hideLoadingUI();
@@ -2829,8 +2834,6 @@ var createScene = function () {
     }
     fencesCoordinates = JSON.stringify(fencesCoordinates);
     localStorage.setItem("coordinates", fencesCoordinates);
-    aaa = localStorage.getItem("coordinates");
-    aaa = JSON.parse(aaa);
   };
   ////////////////////////////////////SMART CART///////////////////////////////
   // loadCart(
