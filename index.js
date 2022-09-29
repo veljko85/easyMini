@@ -1441,7 +1441,6 @@ var createScene = function () {
         new BABYLON.ExecuteCodeAction(
           BABYLON.ActionManager.OnPickTrigger,
           function () {
-            console.log("delete this");
             //delete fence
             if (activeFence > 0) {
               delFenFun(activeFence);
@@ -1843,13 +1842,6 @@ var createScene = function () {
       //set Ground
       setGround();
       // set coordinates for big 3d configurator
-      console.log(fence.position.x, fence.position.z, fence.rotation.y);
-      fencesCoordinates.push([
-        fence.position.x,
-        fence.position.z,
-        fence.rotation.y,
-      ]);
-      console.log(fencesCoordinates);
       //for loading
       setTimeout(() => {
         engine.hideLoadingUI();
@@ -2689,7 +2681,6 @@ var createScene = function () {
     linkParts = linkParts.join("");
     linkParts = linkParts.slice(0, -1);
     link.href += "?add-to-cart=" + linkParts;
-    console.log(prodValues);
   };
 
   //MINIFIED CONF/////////////////////////////////////////////////////////////////////
@@ -2833,12 +2824,13 @@ var createScene = function () {
   //PUSH COORDINATES TO LOCAL STORAGE
   let openFullConfgBtn = document.getElementById("openFullConfgBtn");
   openFullConfgBtn.onclick = () => {
+    for (let i = 0; i < fencesArr.length; i++) {
+      fencesCoordinates[i].push(fencesArr[i].parent, fencesArr[i].children);
+    }
     fencesCoordinates = JSON.stringify(fencesCoordinates);
     localStorage.setItem("coordinates", fencesCoordinates);
     aaa = localStorage.getItem("coordinates");
-    console.log(aaa);
     aaa = JSON.parse(aaa);
-    console.log(aaa);
   };
   ////////////////////////////////////SMART CART///////////////////////////////
   // loadCart(
