@@ -2827,13 +2827,19 @@ var createScene = function () {
     getSumOfAllPrices();
   }
   //PUSH COORDINATES TO LOCAL STORAGE
+  //data for pushing
+  let data;
   let openFullConfgBtn = document.getElementById("openFullConfgBtn");
   openFullConfgBtn.onclick = () => {
+    // console.log(fencesCoordinates);
     for (let i = 0; i < fencesArr.length; i++) {
-      fencesCoordinates[i].push(fencesArr[i].parent, fencesArr[i].children);
+      if (fencesCoordinates[i].length < 4) {
+        fencesCoordinates[i].push(fencesArr[i].parent, fencesArr[i].children);
+      }
     }
-    fencesCoordinates = JSON.stringify(fencesCoordinates);
-    localStorage.setItem("coordinates", fencesCoordinates);
+    // console.log(fencesCoordinates);
+    data = JSON.stringify(fencesCoordinates);
+    localStorage.setItem("coordinates", data);
   };
   ////////////////////////////////////SMART CART///////////////////////////////
   // loadCart(
